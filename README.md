@@ -13,14 +13,16 @@ There're 2 types of HDR content: photometrically **linear** one which is used in
 + Tensorflow-GPU 1.4.1
 + Other packages: opencv-python, imageio, easydict, etc.
 ## How to test
+> Just want to evaluate this menthod, but find it time-consuming configuring prerequisite environment? 
+>> Send your test set to guocheng@cuc.edu.cn and let the author do the rest.
 #### 1. Downloading checkpoint
 Download checkpoint (model parameters) from [BaiduYunNetDisk](https://TODO) (password: XXXX) or [MEGA](https://TODO) TODO, make sure checkpoint (3 files suffixed `.data-00000-of-00001`, `.index` and `.meta` respectively) and a `checkpoint` file indicating the index of checkpoint are placed under `/checkpoint/ftlayer`.
 #### 2. Preparing data
 Place your testing HDR images under `/dataset/test` floder. We recommend to use `.hdr` encapsulation, otherwise you have to go to `/utils/configs.py` and change `config.data.appendix_hdr` to your one as long as package `imageio` support.
 #### 3. Generating TFRecord
-Run `/generate_tfrec.py`, note that our program will automatically clip some boundary pixels if image hight or width could not be divided by 8. 
+Run `/generate_tfrec.py`, note that our program will automatically clip some boundary pixels if image hight or width could not be divided by 8. (Optional) you can set `test_resize_to_half = True` if your later find GPU out of memory.
 #### 4. Testing
-Run `/test.py`, results will be stored under `/result` floder. (Optional) you can set `test_resize_to_half = True` if your GPU is out of memory.
+Run `/test.py`, results will be stored under `/result` floder.
 ## How to Train
 #### 1. (Optional) Downloading pre-trained loss network
 If your want to use "preceptual loss ***l<sub>p</sub>***", download `vgg16.npy` [here](https://mega.nz/#!YU1FWJrA!O1ywiCS2IiOlUCtCpI6HTJOMrneN-Qdv3ywQP5poecM) and place it under `/loss/pretrained`, clone [Pre-trained VGG-16](https://github.com/machrisaa/tensorflow-vgg) and place this repository under `/loss/`.
