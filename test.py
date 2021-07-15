@@ -9,10 +9,8 @@ import imageio as io
 
 
 '''Params. for ablation studies'''
-level = 3
-
-data_mode = 'gamma'
-# data_mode = 'linear'
+level = config.dev.level_num
+data_mode = config.dev.data_domain
 
 # no_hight_branch = True
 no_hight_branch = False

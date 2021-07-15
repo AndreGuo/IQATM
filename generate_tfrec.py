@@ -24,20 +24,11 @@ ft = True  # for training all layer (fine tuning, Step. 2)
 '''===================='''
 
 
-'''3 params. below are only for developing'''
-# mode = 'linear'
-mode = 'gamma'
-
-# filter_mode = 'gaussian'
-filter_mode = 'bilateral'
-
-# fuse_mid_layers = True
-fuse_mid_layers = False
-'''===================='''
-
-
 apdx_sdr = config.data.appendix_sdr
 apdx_hdr = config.data.appendix_hdr
+mode = config.dev.data_domain
+filter_mode = config.dev.decompose_fliter
+fuse_mid_layers = config.dev.fuse_mid_layers
 
 
 def gen_train_tfrec(fine_tuning=False):
