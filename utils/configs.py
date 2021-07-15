@@ -40,9 +40,14 @@ config.train.batchnum_high = round(config.train.total_imgs/config.train.batch_si
 config.train.batchnum_bot = round(config.train.total_imgs/config.train.batch_size_bot)
 config.train.batchnum_ft = round(config.train.total_imgs/config.train.batch_size_ft)
 
-
 config.test = edict()
 config.test.tfrecord_test = 'dataset/tfrecord/test_'
 config.test.result = 'result/'
 config.test.hdr_path = 'dataset/test/'
 # config.test.loss_vgg = 'loss/pretrained/vgg16.npy'
+
+config.dev = edict()
+config.dev.data_domain = 'gamma'  # 'linear'
+config.dev.decompose_fliter = 'bilateral'  # 'gaussian'
+config.dev.fuse_mid_layers = False  # True
+config.dev.level_num = 3
