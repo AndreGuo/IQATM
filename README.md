@@ -4,8 +4,8 @@ This is the official Tensorflow implementation of paper
 <div align=center><img src="https://ieeexplore.ieee.org/ielx7/6287639/9312710/9431092/graphical_abstract/access-gagraphic-3080331.jpg" width="500"></div>  
 
 ## Introduction
-Tone-mapping is to display HDR (High Dynamic Range) image on a traditional SDR (Standrad Dynamic Range, a.k.a. Low Dynamic Range, LDR) display, its result is usually stored as SDR image. That's to say, tone-mapping is the reverse process of single-shot HDR image generation (a.k.a. reverse/inverse tone-mapping).  
-There're 2 types of HDR content: photometrically **linear** one which is used in photograhpy, medicine and image based lighting, and **non-linear** one usually transformed by curve like PQ/HLG and used in film and television. Specifically, our work deals with **linear** HDR content. Checkpoint for **non-linear** HDR content has not been validated yet.
+Tone-mapping is to display HDR (High Dynamic Range) image on a traditional SDR (Standrad Dynamic Range, a.k.a. Low Dynamic Range, LDR) display, its result is usually stored as SDR image. That's to say, tone-mapping is the reverse process of single-shot HDR image generation (a.k.a. reverse/inverse tone-mapping, and SI-HDR).  
+There're 2 types of HDR content: photometrically **linear** one which is used in photograhpy, medicine and image based lighting, and **non-linear** one with PQ/HLG non-linearity which is used in film and television. Specifically, our work deals with **linear** HDR content. Checkpoint for **non-linear** HDR content has not been validated yet.
 ## Prerequisites
 + Unbuntu with PyCharm IDE
 + Python 2.7
@@ -16,7 +16,7 @@ There're 2 types of HDR content: photometrically **linear** one which is used in
 > Just want to evaluate this menthod, but find it time-consuming configuring prerequisite environment? 
 >> Send your test set to guocheng@cuc.edu.cn and let the author do the rest.
 #### 1. Downloading checkpoint
-Download checkpoint (model parameters) from [BaiduYunNetDisk](https://pan.baidu.com/s/1NCIFLaEuPNlJK2B5QkT5aw) (password: 9yvv), make sure checkpoint (3 files suffixed `.data-00000-of-00001`, `.index` and `.meta` respectively) and a `checkpoint` file indicating the index of checkpoint are placed under `/checkpoint/ftlayer`.
+Download checkpoint (model parameters) from [BaiduYunNetDisk](https://pan.baidu.com/s/1NCIFLaEuPNlJK2B5QkT5aw) (password: 9yvv) or [GoogleDrive](https://drive.google.com/drive/folders/1qDF8gR79JiTY8bBXvtU3q5JniKHAMmre?usp=sharing), make sure checkpoint (3 files suffixed `.data-00000-of-00001`, `.index` and `.meta` respectively) and a `checkpoint` file indicating the index of checkpoint are placed under `/checkpoint/ftlayer`.
 #### 2. Preparing data
 Place your testing HDR images under `/dataset/test` floder. We recommend to use `.hdr` encapsulation, otherwise you have to go to `/utils/configs.py` and change `config.data.appendix_hdr` to your one as long as package `imageio` support.
 #### 3. Generating TFRecord
