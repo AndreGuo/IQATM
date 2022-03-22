@@ -13,8 +13,6 @@ There're 2 types of HDR content: photometrically **linear** one which is used in
 + Tensorflow-GPU 1.4.1
 + Other packages: opencv-python, imageio, easydict, etc.
 ## How to test
-> Just want to evaluate this menthod, but find it time-consuming configuring prerequisite environment? 
->> Send your test set to guocheng@cuc.edu.cn and let the author do the rest.
 #### 1. Downloading checkpoint
 Download checkpoint (model parameters) from [BaiduYunNetDisk](https://pan.baidu.com/s/1NCIFLaEuPNlJK2B5QkT5aw) (password: 9yvv) or [GoogleDrive](https://drive.google.com/drive/folders/1qDF8gR79JiTY8bBXvtU3q5JniKHAMmre?usp=sharing), make sure checkpoint (3 files suffixed `.data-00000-of-00001`, `.index` and `.meta` respectively) and a `checkpoint` file indicating the index of checkpoint are placed under `/checkpoint/ftlayer`.
 #### 2. Preparing data
