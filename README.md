@@ -5,7 +5,8 @@ This is the official Tensorflow implementation of paper
 
 ## Introduction
 Tone-mapping is to display HDR (High Dynamic Range) image on a traditional SDR (Standrad Dynamic Range, a.k.a. Low Dynamic Range, LDR) display, its result is usually stored as SDR image. That's to say, tone-mapping is the reverse process of single-shot HDR image generation (a.k.a. reverse/inverse tone-mapping, and SI-HDR).  
-There're 2 types of HDR content: photometrically **linear** one which is used in photograhpy, medicine and image based lighting, and **non-linear** one with PQ/HLG non-linearity which is used in film and television. Specifically, our work deals with **linear** HDR content. Checkpoint for **non-linear** HDR content has not been validated yet.
+There're 2 types of HDR content: photometrically **linear** HDR which is used in photograhpy, medicine and image based lighting, and **non-linear** HDRTV content with PQ/HLG non-linearity and wide gamut RGB primaries which is used in film and television. Dynamic range of the HDR content is relatively higher than HDRTV.
+Specifically, our work deals with **linear** HDR content. Checkpoint for **non-linear** HDRTV content has not been trained yet.
 ## Prerequisites
 + Unbuntu with PyCharm IDE
 + Python 2.7
