@@ -1,1 +1,1 @@
-This floder is for 'vgg16.npy'
+This folder is for 'vgg16.npy'

@@ -1,1 +1,1 @@
-This floder is for placing training SDR images.
+This folder is for placing training SDR images.
