@@ -1,1 +1,1 @@
-This floder is for placing testing HDR images.
+This folder is for placing testing HDR images.

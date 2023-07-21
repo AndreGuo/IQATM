@@ -1,1 +1,1 @@
-This floder stores TFRecord from 'generate_tfrec.py'.
+This folder stores TFRecord from 'generate_tfrec.py'.
